@@ -3,186 +3,208 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#050d1b">
-<title>AHAD HOSTING</title>
+<title>HOSTING BOT AHAD</title>
+
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="https://ads.bengalads.com/sdk/telegram-interstitial.js"></script>
 
 <style>
 *{box-sizing:border-box}
 body{
- margin:0;background:#050d1b;color:#f3f8ff;
+ margin:0;background:#050d1b;color:#fff;
  font-family:Arial,sans-serif;padding:20px;
 }
 .container{max-width:480px;margin:auto}
-.header{display:flex;align-items:center;justify-content:space-between;margin:12px 0 28px}
-.logo{font-size:21px;font-weight:800;letter-spacing:1px}
-.logo span{color:#24c6ef}
-.pill{font-size:11px;color:#45e5bd;background:#10352f;padding:9px 12px;border-radius:20px}
+.header{
+ display:flex;justify-content:space-between;
+ align-items:center;margin:12px 0 28px;
+}
+.logo{font-size:20px;font-weight:900}
+.logo span{color:#22c6ef}
+.pill{
+ color:#43e4b4;background:#10352f;
+ padding:9px 12px;border-radius:20px;font-size:10px
+}
 .hero{
  position:relative;overflow:hidden;
- background:linear-gradient(145deg,#102b49,#09182d 65%,#071323);
- border:1px solid #1b4563;border-radius:26px;
+ background:linear-gradient(145deg,#102b49,#09182d 70%,#071323);
+ border:1px solid #1b4563;border-radius:25px;
  padding:25px 20px;text-align:center;
  box-shadow:0 15px 50px #0006;
 }
 .glow{
  position:absolute;width:180px;height:180px;
- background:#078acb33;filter:blur(45px);
- top:-50px;left:30%;
+ background:#078acb44;filter:blur(55px);
+ top:-60px;left:30%;
 }
 .server{
- position:relative;width:105px;height:105px;
- margin:12px auto 25px;border-radius:50%;
+ position:relative;width:100px;height:100px;
+ margin:10px auto 22px;border-radius:50%;
  border:1px solid #2b83a9;
  display:grid;place-items:center;
- background:#102d48;
+ background:#102d48;font-size:45px;
  box-shadow:0 0 35px #08b9ed33;
- font-size:48px;
 }
-h1{font-size:27px;margin:12px 0}
-p{color:#a4b8cd;line-height:1.7;font-size:14px}
 .ready{
  display:inline-block;color:#43e4b4;
  background:#103b35;padding:8px 14px;
- border-radius:20px;font-size:11px;letter-spacing:2px;
+ border-radius:20px;font-size:10px;letter-spacing:2px;
 }
+h1{font-size:26px;margin:17px 0 10px}
+p{color:#a4b8cd;line-height:1.7;font-size:13px}
 .watch{
  width:100%;margin-top:22px;padding:19px 8px;
- border:0;border-radius:15px;
- color:white;font-size:16px;font-weight:800;
- letter-spacing:1px;
+ border:0;border-radius:14px;color:white;
+ font-size:16px;font-weight:800;
  background:linear-gradient(100deg,#11bce9,#0877bd);
  box-shadow:0 8px 25px #008fcd44;
  cursor:pointer;
 }
-.watch:active{transform:scale(.98)}
-.watch:disabled{opacity:.6}
-.note{font-size:12px;margin-top:16px;color:#819bb4}
-.section{margin-top:22px}
-.section-title{font-size:15px;margin-bottom:13px}
+.watch:disabled{opacity:.5}
+.note{font-size:11px;margin-top:16px;color:#91a9c2}
+.section{margin-top:23px}
+.title{font-size:15px;margin-bottom:13px;font-weight:bold}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .stat{
  background:#0d2035;border:1px solid #1b344c;
- border-radius:16px;padding:17px 5px;text-align:center;
+ border-radius:15px;padding:17px 5px;text-align:center;
 }
-.stat strong{display:block;font-size:23px;color:#45c9f1;margin-bottom:7px}
+.stat strong{display:block;font-size:22px;color:#45c9f1;margin-bottom:7px}
 .stat small{font-size:10px;color:#91a9c2}
 .info{
  background:#0d2035;border:1px solid #1b344c;
  border-radius:18px;padding:18px;margin-top:15px;
 }
-.info-row{display:flex;align-items:center;gap:12px;margin:13px 0}
-.info-icon{font-size:22px}
-.info-row small{display:block;color:#8ca6bd;margin-top:4px}
+.info-row{display:flex;gap:12px;align-items:center;margin:15px 0}
+.info-row small{display:block;color:#8ca6bd;margin-top:5px}
 .footer{text-align:center;color:#718ba4;font-size:11px;margin:25px 0}
-.modal-bg{
- display:none;position:fixed;inset:0;background:#000b;
- align-items:center;justify-content:center;padding:20px;
- z-index:10;
-}
-.modal{
- width:100%;max-width:350px;background:#10233a;
- border:1px solid #28506c;border-radius:22px;
- padding:25px;text-align:center;
-}
-.modal h2{font-size:21px}
-.modal p{font-size:13px}
-.close{
- margin-top:15px;width:100%;padding:14px;
- background:#138dc1;color:white;border:0;
- border-radius:12px;font-weight:bold;
-}
 </style>
 </head>
 
 <body>
 <div class="container">
 
- <header class="header">
-  <div class="logo">☁ AHAD<span> HOSTING</span></div>
-  <div class="pill">● SYSTEM ONLINE</div>
- </header>
+<header class="header">
+ <div class="logo">☁ NUMBER <span>AHAD</span></div>
+ <div class="pill">● ONLINE</div>
+</header>
 
- <main class="hero">
-  <div class="glow"></div>
-  <div class="server">▤</div>
-  <div class="ready">● READY TO DEPLOY</div>
-  <h1>Deploy Your Server</h1>
-  <p>Launch your hosting project with our
-  secure and reliable deployment system.</p>
+<div class="hero">
+ <div class="glow"></div>
+ <div class="server">🖥️</div>
+ <div class="ready">● HOSTING PANEL</div>
 
-  <button class="watch" id="watchBtn" onclick="watchAd()">
-   ▶ &nbsp; WATCH AD & DEPLOY
-  </button>
-  <div class="note" id="status">
-   Sponsored verification required
-  </div>
- </main>
+ <h1>Deploy Your Server</h1>
+ <p>Watch an advertisement to continue.
+ Enjoy a simple and reliable hosting experience.</p>
 
- <div class="section">
-  <div class="section-title">📊 Platform Statistics</div>
-  <div class="stats">
-   <div class="stat">
-    <strong>27</strong><small>VIEWS TODAY</small>
-   </div>
-   <div class="stat">
-    <strong>267</strong><small>DEPLOYS</small>
-   </div>
-   <div class="stat">
-    <strong>1</strong><small>ACTIVE NOW</small>
-   </div>
-  </div>
- </div>
+ <button class="watch" id="watchBtn" onclick="watchAd()">
+ ▶ &nbsp; WATCH AD & DEPLOY
+ </button>
 
- <div class="info">
-  <div class="section-title">🛡 Security Information</div>
-  <div class="info-row">
-   <div class="info-icon">🔒</div>
-   <div>Secure Connection<small>TLS encrypted connection</small></div>
-  </div>
-  <div class="info-row">
-   <div class="info-icon">⚡</div>
-   <div>Fast Deployment<small>Automated server deployment</small></div>
-  </div>
-  <div class="info-row">
-   <div class="info-icon">📡</div>
-   <div>Ad Verification<small>Official ad integration required</small></div>
-  </div>
- </div>
+ <div class="note" id="status">Powered by BengalAds</div>
+</div>
 
- <div class="footer">
-  AHAD HOSTING © 2026<br>
-  Powered by AHAD
+<div class="section">
+ <div class="title">📊 Platform Statistics</div>
+ <div class="stats">
+  <div class="stat"><strong>--</strong><small>VIEWS</small></div>
+  <div class="stat"><strong>--</strong><small>DEPLOYS</small></div>
+  <div class="stat"><strong>--</strong><small>ONLINE</small></div>
  </div>
 </div>
 
-<div class="modal-bg" id="modal">
- <div class="modal">
-  <div style="font-size:40px">📢</div>
-  <h2 id="modalTitle">Advertisement unavailable</h2>
-  <p id="modalText">
-   BengalAds SDK has not been connected yet.
-   Add your official publisher integration code
-   to enable advertisements.
-  </p>
-  <button class="close" onclick="closeModal()">CLOSE</button>
+<div class="info">
+ <div class="title">🛡 System Information</div>
+ <div class="info-row">
+  <span>🔒</span>
+  <div>Secure Connection<small>Telegram Mini App</small></div>
  </div>
+ <div class="info-row">
+  <span>📢</span>
+  <div>BengalAds Integration<small>Interstitial Ads</small></div>
+ </div>
+ <div class="info-row">
+  <span>⚡</span>
+  <div>Hosting Service<small>Deployment backend required</small></div>
+ </div>
+</div>
+
+<div class="footer">
+ NUMBER BOT AHAD © 2026<br>
+ Powered by BengalAds
+</div>
 </div>
 
 <script>
-const tg=window.Telegram.WebApp;
+const tg = window.Telegram.WebApp;
 tg.ready();
 tg.expand();
 
-function watchAd(){
- document.getElementById("modal").style.display="flex";
- document.getElementById("status").innerText=
- "Ad integration is not configured";
+const APP_ID = "tma_178fe48f448e9dc0c61d1374498de79d3c3d03a8";
+const FORMAT_ID = "int_42b3b8a1bdf6ca604c8f7dab6e4b31fd2f709cce";
+
+const btn = document.getElementById("watchBtn");
+const statusText = document.getElementById("status");
+
+let adsReady = false;
+
+function setStatus(text) {
+ statusText.textContent = text;
 }
 
-function closeModal(){
- document.getElementById("modal").style.display="none";
+try {
+ if (typeof BengalAds === "undefined") {
+  throw new Error("BengalAds SDK did not load");
+ }
+
+ BengalAds.init({
+  appId: APP_ID,
+  formatId: FORMAT_ID,
+  telegramInitData: tg.initData
+ });
+
+ adsReady = true;
+ setStatus("BengalAds connected");
+} catch(error) {
+ console.error(error);
+ setStatus("SDK initialization failed. Please reload.");
+}
+
+async function watchAd() {
+ if (!adsReady) {
+  setStatus("BengalAds SDK is not ready.");
+  return;
+ }
+
+ btn.disabled = true;
+ btn.textContent = "LOADING AD...";
+ setStatus("Preparing advertisement...");
+
+ try {
+  const result = await BengalAds.showInterstitial();
+  console.log("BengalAds result:", result);
+
+  if (result && result.status === "closed") {
+   setStatus("Advertisement closed successfully.");
+
+   tg.showAlert(
+    "Advertisement closed. Hosting deployment backend is not connected yet."
+   );
+  } else {
+   setStatus("Ad result received. Check integration status.");
+  }
+
+ } catch(error) {
+  console.error("Ad error:", error);
+  setStatus("Advertisement unavailable. Try again.");
+  tg.showAlert("Advertisement could not be displayed.");
+ } finally {
+  btn.disabled = false;
+  btn.innerHTML = "▶ &nbsp; WATCH AD & DEPLOY";
+ }
 }
 </script>
 </body>
